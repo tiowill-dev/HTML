@@ -1,0 +1,35 @@
+<!--FORMS
+    - Capturar dados de entrada
+    - Input > Entrada
+    
+    Action > define para qual url serão enviados os dados. Se vazio envia para a mesma url
+    Method >
+    - GET
+    - POST-->
+
+<form action="" method="get" enctype="multipart/form-data"> <!--enctype é necessário para informar o servidor sobre o envio do arquivo-->
+    <h1>Digite seu endereço</h1>
+    <label><!--É necessária a tag "name" para que o formulário organize a informação de saída-->
+        Rua:
+    <input type="text" name="rua" autocomplete="street-address"/>
+    </label>
+
+    <label>
+        Número:
+    <input type="number" name="numero" autocomplete="on"/><!--"on" é a tag para sugestão de números aleatórios, inseridos anteriormente-->
+    </label>
+
+    <label>
+        E-mail:
+    <input type="email" name="email"/>
+    </label>
+
+    <label>
+        Arquivo:
+    <input type="file" name="Arquivo"/> <!--para enviar arquivo, é necessário "enctype="multipart/form-data" no topo do formulário-->
+    </label>
+    
+    <button type="reset">Resetar dados</button>
+    <button type="submit">Enviar dados</button><!--"submit" é a função de enviar do botão. Extremamente necessário que <button> esteja dentro de <form>-->
+
+    </form>
